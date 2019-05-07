@@ -54,6 +54,7 @@ class MyPlugin
     }
 
     function register(){
+        // ici backend -  option wp_enqueue_scripts pour front end
         add_action('admin_enqueue_scripts', array($this, 'enqueue'));
     }
 
@@ -79,7 +80,8 @@ class MyPlugin
 
     function enqueue(){
         // all my scripts - css
-        wp_register_style('mypluginstyle', plugins_url('/assets/mystyle.css', __FILE__));
+        wp_enqueue_style('mypluginstyle', plugins_url('/assets/mystyle.css', __FILE__));
+        wp_enqueue_script('mypluginscript', plugins_url('/assets/myscript.js', __FILE__));
     }
 
 }
