@@ -1,0 +1,40 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+<div class="row ">
+    <div class="col-8">
+        <main>
+            <section class="section">
+                <div class="row">
+                    <div class="col-12 ml-3">
+                        <header>
+                            <h1>les derniers Articles : </h1>
+                        </header>
+                    </div>
+                </div>
+
+                <div class="row d-flex flex-row">
+                {% for post in posts %}
+                    <div class="col-6 pl-3">
+                        <article class="article">
+                            <h2>
+                                <a href="{{ post.link }}">
+                                {{ post.title }}
+                                </a>
+                            </h2>
+                            <img class="img-fluid" src="{{ post.thumbnail.src }}">
+                        </article>
+                    </div>
+                {% endfor %}
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+{% endblock %}
+
+
+{#*****************************#}
+{# autre méthode proche de wp
+{% include 'header.twig' %}
+{% include 'footer.twig' %}#}

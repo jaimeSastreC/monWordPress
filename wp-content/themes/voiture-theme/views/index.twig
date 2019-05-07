@@ -1,0 +1,28 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+<div class="container">
+    <aside class="asside">
+        <div class="test">
+            <h1>Informations :</h1>
+            <div style="width: 100%">
+                <iframe frameborder="0" scrolling="no" width="100%" height="200" src="https://maps.google.com/maps?q=<?php the_field('latitude') ?>,<?php the_field('longitude') ?>&hl=es;z=14&amp;output=embed">
+                </iframe>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </aside>
+    <main class="main">
+        <div class="test">
+            <h1>notre Agence :</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque deserunt distinctio dolores earum eligendi excepturi illum iusto, magni minima minus non officiis porro praesentium, quae quia, similique sint tempora.</p>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

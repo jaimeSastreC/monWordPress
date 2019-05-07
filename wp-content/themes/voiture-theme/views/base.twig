@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Concessionaire Auto</title>
+        <!--affiche en mode dev des infos en tête de page essentiel pour wp!!! -->
+        {# à modifier pour TWIG !!!#}
+        {{ function('wp_head')}}
+    </head>
+    <body>
+
+    <header>
+        <div class="header">
+            <nav>
+                <ul id="menu">
+                    {% for item in header_gauche.items %}
+                        <li><a href="{{ item.link }}" class="menu_a" >
+                                {{ item.title }}
+                            </a></li>
+                    {% endfor %}
+                    <li>
+                        <img src="{{ theme.link }}/img/logo.png" class="img-logo"/>
+                    </li>
+
+                    {% for item in header_droite.items %}
+                        <li><a href="{{ item.link }}" class="menu_a">
+                                {{ item.title }}
+                            </a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+            <div class="footer">
+                <h1>footer</h1>
+            </div>
+        </footer>
+        <!-- essentiel pour faire marcher la page -->
+        {# à désactiver pour TWIG #}
+        {{ function('wp_footer')}}
+    </body>
+</html>

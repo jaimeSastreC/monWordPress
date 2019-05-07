@@ -1,0 +1,57 @@
+#menumap {
+	width: 1400px;
+	height: 45px;
+	overflow: hidden;
+	margin: 0px 0 0 3px
+}
+#menumap ul li {
+	background: none repeat scroll 0 0 black;
+	border: 1px solid #999;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 1ps solid white;
+	float: left;
+	padding: 10px;
+	line-height: 10px;
+}
+#menumap ul li a {
+	color: white;
+	text-decoration: none;
+}
+#menumap ul li a:hover {
+	color: #ccc;
+}
+#menumap ul li#active {
+	background: #0073aa none repeat scroll 0 0;
+	color: white;
+	font-weight: bold;
+}
+#menumap ul li#active a,
+#menumap ul li#active a:hover {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: default;
+}
+#contentmap {
+	background: white url("../img/googlemap.jpg") no-repeat scroll 50% center;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 10px 20px;
+	width: 94%;
+	overflow: hidden;
+}
+#contentmap2 {
+	background: white none repeat scroll 0 0;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 10px 20px;
+	width: 94%;
+	overflow: hidden;
+}
+#contentmap .title {
+	color: #0073aa;
+}
+.left {
+	float: left;
+	margin: 10px;
+}
